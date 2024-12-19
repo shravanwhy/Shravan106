@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form id="contact-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name">
+        <div id="name-error" style="color: red;"></div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email">
+        <div id="email-error" style="color: red;"></div>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <div id="message-error" style="color: red;"></div>
+
+        <button type="button" onclick="handleSubmit()">Submit</button>
+    </form>
+
+    <div id="form-success" style="color: green;"></div>
+
+    <script>
+        function handleSubmit() {
+            // Clear previous error messages
+            document.getElementById("name-error").textContent = "";
+            document.getElementById("email-error").textContent = "";
+            document.getElementById("message-error").textContent = "";
+            document.getElementById("form-success").textContent = "";
+
+            // Get values from the form fields
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            let isValid = true;
+
+            // Name validation
+            if (!name) {
+                document.getElementById("name-error").textContent = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            if (!email || !email.includes('@')) {
+                document.getElementById("email-error").textContent = "Please enter a valid email.";
+                isValid = false;
+            }
+
+            // Message validation
+            if (!message) {
+                document.getElementById("message-error").textContent = "Message is required.";
+                isValid = false;
+            }
+
+            // If form is valid, show success message
+            if (isValid) {
+                document.getElementById("form-success").textContent = "Form submitted successfully!";
+                document.getElementById("contact-form").reset(); // Reset the form
+            }
+        }
+    </script>
+
+</body>
+</html>

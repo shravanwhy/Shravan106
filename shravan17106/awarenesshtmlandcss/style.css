@@ -1,0 +1,68 @@
+
+body {
+    background-color: #f4f4f4; /* Light grey background */
+    font-family: 'Verdana', sans-serif; /* Easy-to-read font */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+
+h1 {
+    font-size: 32px;
+    color:  rgb(34, 34, 34); 
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #34495e; /* Slightly lighter color for the subheading */
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 10%;
+    text-align: justify;
+}
+
+
+img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the image */
+}
+
+
+textarea {
+    width: 70%;
+    height: 150px;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    width: 80%;
+}
+
+
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #7f8c8d; /* Soft grey color for the footer */
+}
+
